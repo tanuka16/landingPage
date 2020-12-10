@@ -1,0 +1,21 @@
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+.container {
+  /* animation:slide 3s ease-in-out infinite alternate; */
+  /* background-image: linear-gradient(-60deg, #85FFBD 50%, #21D4FD 50%); */
+  background-color: blue;
+/* background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); */
+
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
