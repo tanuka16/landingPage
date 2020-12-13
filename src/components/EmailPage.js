@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import emailjs from 'emailjs-com';
 
 class EmailPage extends Component{
   state={
@@ -7,11 +8,19 @@ class EmailPage extends Component{
 
   handleChange=(e)=>{
     this.setState({email: e.target.value})
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
   subscribe=(e)=>{
     e.preventDefault();
+
+    emailjs.sendForm('service_bzrkmlc', 'happyheal_unwxuwp', e.target, 'user_9wR5yWVqe2KtMSOH1p6cc')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
   }
 
 
@@ -20,8 +29,8 @@ class EmailPage extends Component{
       <form onSubmit={this.subscribe}>
         <div className="subscribe">
           <input
-            id="email"
-            type="text"
+            id="u_email"
+            type="email"
             placeholder="Enter your email here..."
             name="email"
             value={this.state.email}
