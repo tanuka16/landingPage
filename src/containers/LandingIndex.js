@@ -6,7 +6,7 @@ class LandingIndex extends Component{
     return (
         <div className="parent">
             <div className="half">
-            <a herf="#" ><img className="logo" src="logo.png"/></a>
+            <a><img className="logo" src="logo.png"/></a>
             <br />
             <br />
             <br />
